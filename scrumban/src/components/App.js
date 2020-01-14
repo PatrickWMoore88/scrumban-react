@@ -13,7 +13,12 @@ class App extends Component {
         <h2>Scrumban</h2>
         <div style={styles.listsContainer}>
           {lists.map(list => (
-            <ScrumbanList key={list.id} title={list.title} cards={list.cards} />
+            <ScrumbanList
+              listID={list.id}
+              key={list.id}
+              title={list.title}
+              cards={list.cards}
+            />
           ))}
           <ScrumbanActionButton list />
         </div>

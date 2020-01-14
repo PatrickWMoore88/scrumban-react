@@ -3,14 +3,14 @@ import ScrumbanCard from "./ScrumbanCard";
 import ScrumbanActionButton from "./ScrumbanActionButton";
 // import { CardActions } from "@material-ui/core";
 
-const ScrumbanList = ({ title, cards }) => {
+const ScrumbanList = ({ title, cards, listID }) => {
   return (
     <div style={styles.container}>
       <h4>{title}</h4>
       {cards.map(card => (
         <ScrumbanCard key={card.id} text={card.text} />
       ))}
-      <ScrumbanActionButton />
+      <ScrumbanActionButton listID={listID} />
     </div>
   );
 };
